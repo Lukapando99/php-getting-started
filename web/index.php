@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head> 
-        <title>Count Page Access</title> 
+        <title>Contatore accessi pagina</title> 
    </head> 
   <body>
 
@@ -15,9 +15,9 @@
 
     if (!isset($_COOKIE['count']))
     {
-        ?> 
-Welcome! This is the first time you have viewed this page. 
-<?php 
+   ?> 
+    Contatore = 1 
+    <?php 
         $cookie = 1;
         setcookie("count", $cookie);
     }
@@ -26,8 +26,9 @@ Welcome! This is the first time you have viewed this page.
         $cookie = $_COOKIE['count']++;
         setcookie("count", $cookie);
         ?> 
-You have viewed this page <?= $_COOKIE['count'] ?> times. 
-<?php  }// end else  ?> 
+    Contatore = <?= $_COOKIE['count'] ?>  
+    <?php  }
+    ?> 
   
 
 
