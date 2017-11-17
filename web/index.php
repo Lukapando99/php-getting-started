@@ -19,7 +19,7 @@
     Contatore = 1 
     <?php 
        // $cookie = 1;
-        setcookie("count", $cookie);
+        //setcookie("count", $cookie);
     }
     else
     {
@@ -29,8 +29,6 @@
     Contatore = <?= $_COOKIE['count'] ?>  
     <?php  }
     ?> 
-  
-
 
 </body>
 </html>
