@@ -18,7 +18,7 @@
    ?> 
     Contatore = 1 
     <?php 
-        $cookie = 1;
+       // $cookie = 1;
         setcookie("count", $cookie);
     }
     else
