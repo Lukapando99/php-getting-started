@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head> 
+        <title>Count Page Access</title> 
+   </head> 
+  <body>
 
-<h1>Pandolfi Luca</h1>
+  <h1>Pandolfi Luca</h1>
 
-<?php
-echo "Hello World!";
-?>
+  <?php
+  echo "Hello World!";
+  ?>
+    
+  <?php 
+
+    if (!isset($_COOKIE['count']))
+    {
+        ?> 
+Welcome! This is the first time you have viewed this page. 
+<?php 
+        $cookie = 1;
+        setcookie("count", $cookie);
+    }
+    else
+    {
+        $cookie = $_COOKIE['count']++;
+        setcookie("count", $cookie);
+        ?> 
+You have viewed this page <?= $_COOKIE['count'] ?> times. 
+<?php  }// end else  ?> 
   
-  <p style="color: #ff0000; font-family: trebuchet,
-  Tahoma,Verdana; font-size: 14px; font-weight: bold;"
-  align="center">
-    Un piccolo esempio di come disegnare
-      un cerchio con le librerie GD
-</p>
-<div align="center"><img src="immagine.php"></div>
+
 
 </body>
 </html>
